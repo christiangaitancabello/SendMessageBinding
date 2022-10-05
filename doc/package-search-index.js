@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","url":"allpackages-index.html"},{"l":"com.example.sendmessage"},{"l":"com.example.sendmessage.data"},{"l":"com.example.sendmessage.iu"}]
