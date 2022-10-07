@@ -1,13 +1,17 @@
 package com.example.sendmessagebinding.iu;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
+import com.example.sendmessagebinding.R;
 import com.example.sendmessagebinding.SendMessageApplication;
 import com.example.sendmessagebinding.data.Message;
 import com.example.sendmessagebinding.databinding.ActivitySendMessageBinding;
@@ -96,6 +100,35 @@ public class SendMessageActivity extends AppCompatActivity {
     }
     //endregion
 
+
+    /**
+     * Este método callback crea el menú de opciones en la vista. Se devuelve true para indicar al SO que se ha realizado
+     * la opción de modificar el menú.
+     * @param menu
+     * @return
+     */
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.main, menu);
+        return true;
+    }
+
+    /**
+     * Este método callback se llama cuando se pulsa sobre una de las opciones del menú de la aplicación
+     * @param item
+     * @return
+     */
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.action_aboutus:
+                //Toast.makeText(this, "Se ha pulsado sobre About Us", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(this, AboutUsActivity.class);
+                startActivity(intent);
+                break;
+        }
+        return true;
+    }
 
     /**
      * Este método es el que se llama cuando se pulsa osbre el botón btSend definido en el XML

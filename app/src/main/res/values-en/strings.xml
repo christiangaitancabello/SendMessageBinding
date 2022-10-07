@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">SendMessage</string>
+    <string name="app_name">SendMessageBinding</string>
     <string name="etMessageHint">Write a message...</string>
     <string name="btSendText">Send</string>
     <string name="etUserHint">Introduce your name</string>

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">SendMessage</string>
+    <string name="app_name">SendMessageBinding</string>
     <string name="etMessageHint">Escribe un mensaje...</string>
     <string name="etMessageText" translatable="false" />
     <string name="btSendText">Enviar</string>

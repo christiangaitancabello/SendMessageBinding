@@ -15,7 +15,7 @@ public class SendMessageApplication extends Application {
         super.onCreate();
         Logger.addLogAdapter(new AndroidLogAdapter());
         Logger.d("Se ha inicializado el objeto Application");
-        user = new User("Christian", "al.christian.gaitan.cabello@iesportada.org");
+        user = new User("Christian Gaitán", "al.christian.gaitan.cabello@iesportada.org");
     }
 
     public User getUser() {
