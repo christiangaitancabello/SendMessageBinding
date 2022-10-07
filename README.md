@@ -102,8 +102,39 @@ Para que haga su función, haremos click derecho en la interfaz y seleccionaremo
 ------------
 
 ### Añadir librería externa
-A través de la opción *File > Project Structure > Dependencies > Add Dependecy > Library Dependecy* añadimos la librería [Logger](https://github.com/orhanobut/logger "Logger") del usuario @orhanobut de GitHub.
+A través de la opción *File > Project Structure > Dependencies > Add Dependecy > Library Dependecy* añadimos la librería [Logger](https://github.com/orhanobut/logger "Logger") del usuario @orhanobut de GitHub. El proyecto también cuenta con la librería [MaterialAbout](https://github.com/jrvansuita/MaterialAbout) de @jrvansuita, con la que se diseña una Activity 'About Us'.
 
+------------
+
+### Añadir menú a la aplicación
+Para añadir un menú nuestra aplicación, primero tuvimos que hacer click derecho en la carpeta 'res' del proyecto (Con vista *Android*) y seleccionar *New > Android Resource Directory*, se nos abrirá una ventana en la que especificaremos en el 'Resource type' que será de tipo menu, en la carpeta que crea, añadiremos un 'Menu Resource File'. Contenido del fichero:
+
+	<?xml version="1.0" encoding="utf-8"?>
+	<menu xmlns:android="http://schemas.android.com/apk/res/android">
+		<item
+		   android:id="@+id/action_aboutus"
+		   android:title="@string/aboutUsTitle" />
+	</menu>
+
+Para que el menú sea visible en nuestra Activity, reescribimos los métodos *OnCreateOptionsMenu()* y *onOptionsItemSelected()*.
+Código del *OnCreateOptionsMenu()* (Añade el menú a la Activity):
+
+	public boolean onCreateOptionsMenu(Menu menu) {
+		getMenuInflater().inflate(R.menu.main, menu);
+		return true;
+	}
+
+Código del *onOptionsItemSelected()* (Abre una Activity con el contenido de 'Sobre nosotros'):
+
+	public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+		switch (item.getItemId()) {
+			case R.id.action_aboutus:
+				Intent intent = new Intent(this, AboutUsActivity.class);
+				startActivity(intent);
+				break;
+		}
+	return true;
+	}
 
 ## Características
 - SDK mínimo para el uso de la aplicación: 23
@@ -113,4 +144,4 @@ A través de la opción *File > Project Structure > Dependencies > Add Dependecy
 
 
 ## Librerías
-El proyecto cuenta con las librerías por defecto de Android, además de las externas de la API 32 de Android y la librería [Logger](https://github.com/orhanobut/logger "Logger").
+El proyecto cuenta con las librerías por defecto de Android, además de las externas de la API 32 de Android junto a la librería [Logger](https://github.com/orhanobut/logger "Logger") y [MaterialAbout](https://github.com/jrvansuita/MaterialAbout).
