@@ -8,4 +8,6 @@
     <string name="tvUserText">El usuario:</string>
     <string name="imgMessageContentDescription">Imagen que muestra un sobre</string>
     <string name="aboutUsTitle">Sobre nosotros</string>
+    <string name="aboutUsSubtitle">Estudiante IES Portada Alta</string>
+    <string name="aboutUsGitHubUser" translatable="false">christiangaitancabello</string>
 </resources>

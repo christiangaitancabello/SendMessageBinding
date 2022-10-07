@@ -8,4 +8,5 @@
     <string name="tvUserText">The user:</string>
     <string name="imgMessageContentDescription">Image that shows a letter</string>
     <string name="aboutUsTitle">About us</string>
+    <string name="aboutUsSubtitle">IES Portada Alta student</string>
 </resources>
