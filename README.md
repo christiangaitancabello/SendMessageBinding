@@ -144,4 +144,4 @@ Código del *onOptionsItemSelected()* (Abre una Activity con el contenido de 'So
 
 
 ## Librerías
-El proyecto cuenta con las librerías por defecto de Android, además de las externas de la API 32 de Android junto a la librería [Logger](https://github.com/orhanobut/logger "Logger") y [MaterialAbout](https://github.com/jrvansuita/MaterialAbout).
+El proyecto cuenta con las librerías por defecto de Android, además de las externas de la API 32 de Android junto a la librería [Logger](https://github.com/orhanobut/logger "Logger") y [MaterialAbout](https://github.com/jrvansuita/MaterialAbout)
